@@ -13,6 +13,7 @@ caching-compiler@1.0.4
 caching-html-compiler@1.0.6
 callback-hook@1.0.8
 check@1.2.1
+coursierprive:tether@1.1.1
 ddp@1.2.5
 ddp-client@1.2.7
 ddp-common@1.2.5
