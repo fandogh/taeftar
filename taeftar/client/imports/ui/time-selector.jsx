@@ -1,12 +1,13 @@
 import React, {Component, PropTypes} from 'react';
 
 // Counter component
-export default class Header extends Component {
+export default class TimeSelector extends Component {
 
     render() {
         return (
-            <div className="header">
-
+            <div className="time-selector">
+                <span>به وقت</span>
+                <span>تهران</span>
             </div>
         );
     }

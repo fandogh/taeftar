@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{meteor-packages-auto-import-browser, meteor-packages-auto-import-npm}" />
+    <file url="file://$PROJECT_DIR$" libraries="{taeftar node_modules}" />
+    <file url="PROJECT" libraries="{meteor-packages-auto-import-browser, meteor-packages-auto-import-cordova, meteor-packages-auto-import-npm, meteor-packages-auto-import-os}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
     <includedPredefinedLibrary name="Meteor project library" />
   </component>
