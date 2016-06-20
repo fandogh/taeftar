@@ -12,6 +12,3 @@ rsync -avz --progress /tmp/taeftar.tar.gz ni8.ir:/.data/ramzan/data/taeftar/taef
 
 echo "Restart server"
 ssh ni8.ir -C "cd /.data/ramzan && docker-compose restart"
-
-echo "Remove build"
-rm -rv /tmp/taeftar.tar.gz

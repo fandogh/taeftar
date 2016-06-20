@@ -11,6 +11,11 @@ export default class Pray {
             tomorrow: this.getTimes(new Date(this.createdAt.getTime() + 24 * 60 * 60 * 1000))
         };
         this.remaining = {};
+        this.use_hour = true;
+    }
+
+    toggle() {
+        this.use_hour = !this.use_hour;
     }
 
     update() {
@@ -39,20 +44,17 @@ export default class Pray {
         this.remaining.seconds -= this.remaining.minutes * 60;
 
         // Hour
-        this.remaining.hours = parseInt(this.remaining.minutes / 60);
-        this.remaining.minutes -= this.remaining.hours * 60;
+        if (this.use_hour) {
+            this.remaining.hours = parseInt(this.remaining.minutes / 60);
+            this.remaining.minutes -= this.remaining.hours * 60;
+        }
 
         // R
         this.remaining.r = [];
-
-        if (this.remaining.hours > 0)
+        if (this.use_hour && this.remaining.hours > 0)
             this.remaining.r.push({lbl: 'ساعت', val: this.remaining.hours});
-
-        if (this.remaining.minutes > 0)
-            this.remaining.r.push({lbl: 'دقیقه', val: this.remaining.minutes});
-
-        if (this.remaining.seconds > 0)
-            this.remaining.r.push({lbl: 'ثانیه', val: this.remaining.seconds});
+        this.remaining.r.push({lbl: 'دقیقه', val: this.remaining.minutes});
+        this.remaining.r.push({lbl: 'ثانیه', val: this.remaining.seconds});
 
     }
 

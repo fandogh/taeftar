@@ -1,3 +1,6 @@
+/* Imports */
+/*@import "/css/circle.css";*/
+
 /* Fonts */
 
 @font-face {
@@ -52,10 +55,10 @@ body {
     border-radius: 8px;
     background: #4C4C4D;
     color: #D4D83E;
-    margin-right: 10px;
+    margin-right: 50px;
     margin-top: 20px;
-    font-size: 25px;
-    padding: 5px 10px;
+    font-size: 20px;
+    padding: 10px 10px;
 }
 
 .time-selector span:first-child {
@@ -184,10 +187,10 @@ body {
     right: 0;
     margin: auto;
 
-    -webkit-filter: drop-shadow(6px 6px 20px rgba(0, 0, 0, 0.5));
-    filter: url(#drop-shadow);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    /*-webkit-filter: drop-shadow(6px 6px 20px rgba(0, 0, 0, 0.5));*/
+    /*filter: url(#drop-shadow);*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";*/
+    /*filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";*/
 
 }
 

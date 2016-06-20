@@ -2,3 +2,7 @@
 .meteor/meteorite
 .idea
 *.iml
+node_modules/
+.tmp*
+.idea
+*.iml
