@@ -3,8 +3,17 @@
     <div class="header">
       <div class="time-selector">
         <span>به وقت</span>
-        <span>تهران</span>
+        <span>{{$store.state.city.name}}</span>
       </div>
+
+      <router-link
+        v-for="city,key in cities"
+        :to="`/${key}`"
+        class="city-link"
+        active-class="active"
+      >
+        {{ city.name }}
+      </router-link>
     </div>
 
     <nuxt></nuxt>
@@ -26,6 +35,29 @@
   </div>
 </template>
 
+<style>
+  .city-link {
+    text-decoration: none;
+    color: #E39657;
+    margin-right: 10px;
+  }
+  .city-link.active {
+    border-bottom: 3px solid #E39657;
+  }
+</style>
+
 <script>
-  export default {}
+  import {mapMutations, mapActions} from 'vuex'
+  import Cities from '../lib/cities'
+
+  export default {
+    methods: {
+      ...mapActions(['updateCity']),
+    },
+    computed: {
+      cities() {
+        return Cities
+      }
+    }
+  }
 </script>

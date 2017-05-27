@@ -4,8 +4,10 @@
       <div class="counter-circle" @click="toggle">
         <p class="counter-title">{{$store.state.r[0].val}}</p>
         <p class="counter-subtitle">{{$store.state.r[0].lbl}}</p>
-        <p class="counter-subtitle">
-          + {{$store.state.r[1].val}} {{$store.state.r[1].lbl}}</p>
+        <template v-if="$store.state.r[1].val">
+          <p class="counter-subtitle">
+            + {{$store.state.r[1].val}} {{$store.state.r[1].lbl}}</p>
+        </template>
         <p class="counter-desc">
           <span>مونده تا </span>
           {{$store.state.to}}
@@ -18,17 +20,21 @@
 
 <script>
   import {mapMutations, mapActions} from 'vuex'
+  import Cities from '../lib/cities'
 
   export default {
-    created() {
-      this.update();
+    async fetch({params: {city = 'tehran'}, store}) {
+      await store.dispatch('updateCity', city);
+    },
+    validate({params: {city = 'tehran'}}) {
+      return Boolean(Cities[city]);
     },
     mounted() {
       this.timer = setInterval(this.update.bind(this), 1000);
     },
     methods: {
       ...mapMutations(['update']),
-      ...mapActions(['toggle']),
+      ...mapActions(['toggle', 'updateCity']),
     }
   }
 </script>

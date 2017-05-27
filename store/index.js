@@ -1,16 +1,17 @@
 import {getTimes} from '../lib/pray'
+import Cities from '../lib/cities'
 
 export default {
   state() {
     let now = new Date();
-    let city = 'tehran';
+    let city = Cities['tehran'];
     return {
       city,
       createdAt: now,
       use_hour: true,
       times: {
-        today: getTimes(now, city),
-        tomorrow: getTimes(new Date(now.getTime() + 24 * 60 * 60 * 1000), city)
+        today: getTimes(now, city.loc),
+        tomorrow: getTimes(new Date(now.getTime() + 24 * 60 * 60 * 1000), city.loc)
       },
       r: [
         {
@@ -31,14 +32,18 @@ export default {
       commit('toggleUseHour');
       commit('update');
     },
-    setCity({commit}, city) {
-      commit('updateCity', city);
+    updateCity({commit}, city) {
+      commit('setCity', Cities[city]);
       commit('update');
     },
   },
   mutations: {
-    updateCity(state, city) {
-      state.city = city
+    setCity(state, city) {
+      state.city = city;
+      let now = new Date();
+
+      state.times.today = getTimes(now, city.loc);
+      state.times.tomorrow = getTimes(new Date(now.getTime() + 24 * 60 * 60 * 1000), city.loc);
     },
     toggleUseHour(state) {
       state.use_hour = !state.use_hour;

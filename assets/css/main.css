@@ -50,6 +50,7 @@ body {
   text-align: right;
   position: absolute;
   top: 0;
+  z-index: 9999999;
 }
 
 .info {
@@ -71,6 +72,7 @@ body {
   margin-top: 20px;
   font-size: 20px;
   padding: 10px 10px;
+  min-width:130px;
 }
 
 .time-selector span:first-child {
@@ -193,8 +195,8 @@ body {
 
 .counter-circle .counter-img {
   position: absolute;
-  right: 50%;
-  z-index: -100;
+  bottom: -220px;
+  right: 60px;
 }
 
 /* Responsive */
@@ -223,6 +225,10 @@ body {
 
   .footer {
     font-size: 4vw;
+  }
+
+  .city-link{
+    display: none;
   }
 
 }
