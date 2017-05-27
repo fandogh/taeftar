@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="counter">
-      <div class="counter-circle" onClick="toggle">
-        <p class="counter-title">{{$store.state.remaining.r[0].val}}</p>
-        <p class="counter-subtitle">{{$store.state.remaining.r[0].lbl}}</p>
+      <div class="counter-circle" @click="toggle">
+        <p class="counter-title">{{$store.state.r[0].val}}</p>
+        <p class="counter-subtitle">{{$store.state.r[0].lbl}}</p>
         <p class="counter-subtitle">
-          + {{$store.state.remaining.r[1].val}} {{$store.state.remaining.r[1].lbl}}</p>
+          + {{$store.state.r[1].val}} {{$store.state.r[1].lbl}}</p>
         <p class="counter-desc">
           <span>مونده تا </span>
-          {{$store.state.remaining.to}}
+          {{$store.state.to}}
         </p>
         <img class="counter-img" src="~assets/img/eftar.png"/>
       </div>
@@ -17,10 +17,18 @@
 </template>
 
 <script>
+  import {mapMutations, mapActions} from 'vuex'
 
   export default {
-    mount() {
-      this.timer = setInterval((this.tick).bind(this), 1000);
+    created() {
+      this.update();
     },
+    mounted() {
+      this.timer = setInterval(this.update.bind(this), 1000);
+    },
+    methods: {
+      ...mapMutations(['update']),
+      ...mapActions(['toggle']),
+    }
   }
 </script>

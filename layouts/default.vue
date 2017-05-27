@@ -17,10 +17,10 @@
       </div>
       <div class="info">
         <span>اذان مغرب : </span>
-        <!--<span>pray.times.today['maghribo']</span>-->
+        <span>{{$store.state.times.today['maghribo']}}</span>
         <br/>
         <span>اذان صبح : </span>
-        <!--<span>pray.times.tomorrow['fajro']</span>-->
+        <span>{{$store.state.times.today['fajro']}}</span>
       </div>
     </div>
   </div>
