@@ -35,7 +35,7 @@ export default {
       let _city = Cities[city];
 
       // Current location
-      if (city === 'current') {
+      if (city === '') {
         if (typeof window !== 'undefined' && navigator && navigator.geolocation) {
           // Web
           navigator.geolocation.getCurrentPosition(position => {

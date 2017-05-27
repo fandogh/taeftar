@@ -46,10 +46,9 @@ body {
 /* Header */
 
 .header {
-  width: 100%;
   text-align: right;
   position: absolute;
-  top: 0;
+  top: 25px;
   z-index: 9999999;
 }
 
@@ -68,10 +67,8 @@ body {
   border-radius: 8px;
   background: #4C4C4D;
   color: #D4D83E;
-  margin-right: 50px;
-  margin-top: 20px;
   font-size: 20px;
-  padding: 10px 10px;
+  padding: 5px 5px;
   min-width:130px;
 }
 

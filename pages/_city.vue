@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="counter static" v-if="available">
-      <div class="counter-circle" @click="toggle">
+    <div class="counter static">
+      <div class="counter-circle" @click="toggle" v-if="available">
         <p class="counter-title">{{$store.state.r[0].val}}</p>
         <p class="counter-subtitle">{{$store.state.r[0].lbl}}</p>
         <template v-if="$store.state.r[1].val">
@@ -14,6 +14,14 @@
         </p>
         <img class="counter-img" src="~assets/img/eftar.png"/>
       </div>
+      <div v-else>
+        <span>در حال دریافت موقعیت...</span>
+      </div>
+    </div>
+
+    <div class="zekr">
+      <p>{{$store.state.zekr.persian}}</p>
+      <p>{{$store.state.zekr.arabic}}</p>
     </div>
   </div>
 </template>
@@ -23,18 +31,15 @@
   import Cities from '../lib/cities'
 
   export default {
-    async fetch({params: {city}, store, redirect}) {
-      if (!city) {
-        return redirect('/tehran')
-      }
+    async fetch({params: {city = ''}, store, redirect}) {
       await store.dispatch('updateCity', city);
     },
-    validate({params: {city = 'tehran'}}) {
+    validate({params: {city = ''}}) {
       return Boolean(Cities[city]);
     },
     async mounted() {
       if (!this.available) {
-        await this.updateCity('current')
+        await this.updateCity('')
       }
       this.timer = setInterval(this.update.bind(this), 1000);
     },
