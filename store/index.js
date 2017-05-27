@@ -34,14 +34,25 @@ export default {
     updateCity({commit, dispatch}, city) {
       let _city = Cities[city];
 
-      // Current location
-      if (city === '') {
-        if (typeof window !== 'undefined' && navigator && navigator.geolocation) {
-          // Web
-          navigator.geolocation.getCurrentPosition(position => {
-            _city.loc = [position.coords.latitude, position.coords.longitude]
-            dispatch('updateCity', city)
-          });
+      // Current location (On web only)
+      if (city === '' && typeof window !== 'undefined') {
+        // Web
+        const fallBack = () => $nuxt.$router.push('/tehran');
+        if (navigator && navigator.geolocation) {
+          try {
+            navigator.geolocation.getCurrentPosition(position => {
+              _city.loc = [position.coords.latitude, position.coords.longitude]
+              dispatch('updateCity', city)
+            }, err => {
+              fallBack();
+            });
+          } catch (e) {
+            // If user denies
+            return fallBack();
+          }
+        } else {
+          // If navigator is not available
+          fallBack();
         }
       }
 

@@ -142,16 +142,13 @@ body {
 /* Counter */
 
 .counter {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
   color: #E59554;
-  position: absolute;
-
   display: flex;
   justify-content: center;
-  padding-top: 100px;
-
+  align-items: center;
 }
 
 .counter-circle {
@@ -211,19 +208,6 @@ body {
 /* Responsive */
 
 @media handheld,(max-device-width: 500px),(max-width: 500px),(max-device-height: 500px) {
-
-  .time-selector {
-    font-size: 5vw;
-  }
-
-  .counter {
-    align-items: center;
-  }
-
-  .counter-circle .counter-img {
-    display: none;
-  }
-
   .counter-circle {
     width: 90vmin;
     height: 90vmin;
@@ -231,13 +215,7 @@ body {
     max-height: 90vmin;
     font-size: 30vmin;
   }
-
   .footer {
     font-size: 4vw;
   }
-
-  .city-link{
-    display: none;
-  }
-
 }
