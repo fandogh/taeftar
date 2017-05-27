@@ -4,27 +4,26 @@ import Cities from '../lib/cities'
 export default {
   state() {
     let now = new Date();
-    let city = Cities['tehran'];
     return {
-      city,
+      city: {
+        name: '',
+        loc: []
+      },
+      loadingCity: false,
       createdAt: now,
       use_hour: true,
       times: {
-        today: getTimes(now, city.loc),
-        tomorrow: getTimes(new Date(now.getTime() + 24 * 60 * 60 * 1000), city.loc)
+        today: 0,
+        tomorrow: 0
       },
-      r: [
-        {
-          lbl: '',
-          val: ''
-        },
-        {
-          lbl: '',
-          val: ''
-        }
-      ],
+      r: [],
       to: '',
       diff: 0,
+    }
+  },
+  getters: {
+    available(state) {
+      return Boolean(state.city.loc[0] && state.city.loc[1])
     }
   },
   actions: {
@@ -32,8 +31,21 @@ export default {
       commit('toggleUseHour');
       commit('update');
     },
-    updateCity({commit}, city) {
-      commit('setCity', Cities[city]);
+    updateCity({commit, dispatch}, city) {
+      let _city = Cities[city];
+
+      // Current location
+      if (city === 'current') {
+        if (typeof window !== 'undefined' && navigator && navigator.geolocation) {
+          // Web
+          navigator.geolocation.getCurrentPosition(position => {
+            _city.loc = [position.coords.latitude, position.coords.longitude]
+            dispatch('updateCity', city)
+          });
+        }
+      }
+
+      commit('setCity', _city);
       commit('update');
     },
   },
@@ -41,7 +53,6 @@ export default {
     setCity(state, city) {
       state.city = city;
       let now = new Date();
-
       state.times.today = getTimes(now, city.loc);
       state.times.tomorrow = getTimes(new Date(now.getTime() + 24 * 60 * 60 * 1000), city.loc);
     },

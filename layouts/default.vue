@@ -25,7 +25,7 @@
           <img src="~assets/img/fandogh.png" width="50px" height="50px"/>
         </a>
       </div>
-      <div class="info static">
+      <div class="info static" v-if="available">
         <span>اذان مغرب : </span>
         <span>{{$store.state.times.today['maghribo']}}</span>
         <br/>
@@ -48,17 +48,18 @@
 </style>
 
 <script>
-  import {mapMutations, mapActions} from 'vuex'
+  import {mapMutations, mapActions,mapGetters } from 'vuex'
   import Cities from '../lib/cities'
 
   export default {
     methods: {
-      ...mapActions(['updateCity']),
+      ...mapActions(['updateCity'])
     },
     computed: {
       cities() {
         return Cities
-      }
+      },
+      ...mapGetters (['available'])
     }
   }
 </script>
