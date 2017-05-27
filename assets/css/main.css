@@ -131,6 +131,17 @@ body {
   background: #E59554;
 }
 
+/* Static */
+.static {
+  cursor: default;
+  /* Make text non selectable */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+
 /* Counter */
 
 .counter {
@@ -143,6 +154,7 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 100px;
+
 }
 
 .counter-circle {

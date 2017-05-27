@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <div class="header">
-      <div class="time-selector">
+      <div class="time-selector static">
         <span>به وقت</span>
         <span>{{$store.state.city.name}}</span>
       </div>
@@ -9,6 +9,7 @@
       <router-link
         v-for="city,key in cities"
         :to="`/${key}`"
+        :key="key"
         class="city-link"
         active-class="active"
       >
@@ -24,7 +25,7 @@
           <img src="~assets/img/fandogh.png" width="50px" height="50px"/>
         </a>
       </div>
-      <div class="info">
+      <div class="info static">
         <span>اذان مغرب : </span>
         <span>{{$store.state.times.today['maghribo']}}</span>
         <br/>

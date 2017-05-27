@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="counter">
+    <div class="counter static">
       <div class="counter-circle" @click="toggle">
         <p class="counter-title">{{$store.state.r[0].val}}</p>
         <p class="counter-subtitle">{{$store.state.r[0].lbl}}</p>
@@ -23,7 +23,10 @@
   import Cities from '../lib/cities'
 
   export default {
-    async fetch({params: {city = 'tehran'}, store}) {
+    async fetch({params: {city}, store, redirect}) {
+      if (!city) {
+        return redirect('/tehran')
+      }
       await store.dispatch('updateCity', city);
     },
     validate({params: {city = 'tehran'}}) {
