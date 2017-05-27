@@ -45,7 +45,6 @@ export default {
     },
     update(state) {
       let now = new Date();
-      console.log(new Date(state.times.today.fajr) - now)
       let s = [
         {to: 'سحر', diff: new Date(state.times.today.fajr) - now},
         {to: 'افطار', diff: new Date(state.times.today.maghrib) - now},
