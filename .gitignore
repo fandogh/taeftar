@@ -1,8 +1,15 @@
-.meteor/local
-.meteor/meteorite
-.idea
-*.iml
-node_modules/
-.tmp*
+# dependencies
+node_modules
+
+# logs
+*.log*
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# Intellij Idea
 .idea
 *.iml
