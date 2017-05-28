@@ -1,5 +1,6 @@
 import {getTimes} from '../lib/pray'
 import Cities from '../lib/cities'
+import Axios from 'axios'
 
 export default {
   state() {
@@ -31,29 +32,57 @@ export default {
       commit('toggleUseHour');
       commit('update');
     },
-    updateCity({commit, dispatch}, city) {
+    async updateCity({commit, dispatch}, city) {
       let _city = Cities[city];
+      const inBrowser = typeof window !== 'undefined';
+      const localStorageAvailable = typeof localStorage !== 'undefined';
 
-      // Current location (On web only)
-      if (city === '' && typeof window !== 'undefined') {
-        // Web
-        const fallBack = () => $nuxt.$router.push('/tehran');
-        if (navigator && navigator.geolocation) {
-          try {
-            navigator.geolocation.getCurrentPosition(position => {
-              _city.loc = [position.coords.latitude, position.coords.longitude]
-              dispatch('updateCity', city)
-            }, err => {
-              fallBack();
-            });
-          } catch (e) {
-            // If user denies
-            return fallBack();
-          }
-        } else {
-          // If navigator is not available
-          fallBack();
+      // Current location
+      if (city === '' && inBrowser) {
+        // Cache Helpers
+        const updateCache = () => {
+          if (!localStorageAvailable) return;
+          localStorage.setItem('currentCity', JSON.stringify(_city))
         }
+        // Try to load from cache
+        if (localStorageAvailable) {
+          Object.assign(_city, JSON.parse(localStorage.getItem('currentCity')));
+        }
+        // Try to get basic location info using IP
+        Axios.get('https://freegeoip.net/json/').then(({data}) => {
+          _city.loc = [data.latitude, data.longitude]
+
+          // Determine city name
+          let cityName = data.city
+          if (cityName === '') {
+            const z = data.time_zone.split('/')
+            cityName = z[1] || z[0]
+          }
+          _city.name = data.country_name + ' ' + cityName
+
+          updateCache();
+        }).catch(() => null).then(() => {
+          if (navigator && navigator.geolocation) {
+            try {
+              const ua = navigator.userAgent.toLowerCase()
+              const isAndroid = ua.indexOf("android") > -1
+              navigator.geolocation.getCurrentPosition(position => {
+                  _city.loc = [position.coords.latitude, position.coords.longitude]
+                  console.log('Using geolocation!')
+                  updateCache();
+                  commit('setCity', _city);
+                  commit('update');
+                },
+                err => null,
+                {
+                  timeout: isAndroid ? 15000 : 5000,
+                  maximumAge: 60 * 60 * 1000
+                });
+            } catch (e) {
+
+            }
+          }
+        })
       }
 
       commit('setCity', _city);

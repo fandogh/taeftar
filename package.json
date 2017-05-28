@@ -2,9 +2,13 @@
   "name": "taeftar",
   "private": true,
   "scripts": {
-    "dev": "nuxt dev"
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^1.0.1",
+    "@nuxtjs/google-analytics": "^0.1.0",
     "nuxt": "^1.0.0-alpha1"
   }
 }
