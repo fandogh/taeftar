@@ -13,3 +13,5 @@ dist
 # Intellij Idea
 .idea
 *.iml
+
+static/manifest.json
