@@ -12,6 +12,20 @@
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-0.1.0.tgz#2e3028ce2e4412bcc45fcfaccb72e430ef7f1111"
 
+"@nuxtjs/manifest@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.0.0.tgz#3193e30061ecfc3a36f1386143bb05062c5a84ac"
+
+"@nuxtjs/meta@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-1.0.0.tgz#4f7de664fd6de30c4d34ae74b84393b5bc89725e"
+
+"@nuxtjs/offline@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/offline/-/offline-1.0.0.tgz#634f9ec7d3e6ab99a0b6595d4e04d443a6c61415"
+  dependencies:
+    offline-plugin "^4.7.0"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"

@@ -58,7 +58,15 @@ export default {
             const z = data.time_zone.split('/')
             cityName = z[1] || z[0]
           }
-          _city.name = data.country_name + ' ' + cityName
+          cityName = cityName.toLowerCase();
+          let countryName = data.country_name.toLowerCase();
+          if (countryName === 'iran') {
+            countryName = 'ایران';
+          }
+          if (cityName === 'tehran') {
+            cityName = 'تهران';
+          }
+          _city.name = countryName + ' / ' + cityName;
 
           updateCache();
         }).catch(() => null).then(() => {

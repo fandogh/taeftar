@@ -24,38 +24,20 @@
 /* Body */
 
 body {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0;
-  margin: 0;
   background-color: #E4E4E5;
   direction: rtl;
   font-family: 'Samim', serif;
-  overflow-y: hidden;
-}
-
-/* App */
-
-.app-container {
-  margin: 0 auto;
-  width: 100%;
 }
 
 /* Header */
 
 .header {
   text-align: right;
-  position: absolute;
-  top: 25px;
+  padding: 25px;
   z-index: 9999999;
 }
 
 .info {
-  position: absolute;
-  bottom: 30px;
-  left: 50px;
   padding: 20px;
   border-radius: 5px;
   background: rgba(76, 76, 77, .5);
@@ -69,7 +51,7 @@ body {
   color: #D4D83E;
   font-size: 20px;
   padding: 5px 5px;
-  min-width:130px;
+  min-width: 130px;
 }
 
 .time-selector span:first-child {
@@ -90,16 +72,20 @@ body {
 /* Footer */
 
 .footer {
-  width: 100%;
-  text-align: center;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer > * {
+  margin: 0 10px;
 }
 
 .footer .logo {
-  position: absolute;
-  bottom: 30px;
-  right: 50px;
   opacity: 0.4;
   filter: alpha(opacity=40);
   z-index: 9999;
@@ -142,13 +128,10 @@ body {
 /* Counter */
 
 .counter {
-  width: 100vw;
-  height: 100vh;
   text-align: center;
   color: #E59554;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .counter-circle {
@@ -200,9 +183,9 @@ body {
 }
 
 .counter-circle .counter-img {
-  position: absolute;
-  bottom: -220px;
-  right: 60px;
+  width: 200px;
+  bottom: 10%;
+  position: fixed;
 }
 
 /* Responsive */
@@ -215,7 +198,12 @@ body {
     max-height: 90vmin;
     font-size: 30vmin;
   }
+
   .footer {
     font-size: 4vw;
+  }
+
+  .counter-img {
+    display: none;
   }
 }

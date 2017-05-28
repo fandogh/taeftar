@@ -9,6 +9,9 @@
   "dependencies": {
     "@nuxtjs/axios": "^1.0.1",
     "@nuxtjs/google-analytics": "^0.1.0",
+    "@nuxtjs/manifest": "^1.0.0",
+    "@nuxtjs/meta": "^1.0.0",
+    "@nuxtjs/offline": "^1.0.0",
     "nuxt": "^1.0.0-alpha1"
   }
 }

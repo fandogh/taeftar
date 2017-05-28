@@ -1,8 +1,9 @@
 module.exports = {
-  loading: {color: '#3B8070'},
+  loading: {color: '#E39657'},
   head: {
-    script: [
-      {src: 'https://www.google.com/jsapi'}
+    title: 'تا افطار',
+    meta: [
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'}
     ]
   },
   css: [
@@ -11,6 +12,8 @@ module.exports = {
   ],
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/manifest',
+    '@nuxtjs/offline',
     {
       src: '@nuxtjs/google-analytics',
       options: {
