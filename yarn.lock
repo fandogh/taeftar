@@ -3,26 +3,28 @@
 
 
 "@nuxtjs/axios@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-1.0.1.tgz#6ee43f40bb8e6edb692ad39bbc58ee25c758fda3"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-1.0.2.tgz#29b51137b92ce7f51eb899559a83e0316eb052b4"
   dependencies:
     axios "^0.16.1"
 
-"@nuxtjs/google-analytics@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-0.1.0.tgz#2e3028ce2e4412bcc45fcfaccb72e430ef7f1111"
+"@nuxtjs/google-analytics@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-0.2.0.tgz#4975ef90f8ebdd2493dd6a769ec5e464d8f6db98"
 
 "@nuxtjs/manifest@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.0.0.tgz#3193e30061ecfc3a36f1386143bb05062c5a84ac"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.0.1.tgz#73acb31e32c8791f0d4248fe1b95fd1b12a62949"
+  dependencies:
+    lodash "^4.17.4"
 
 "@nuxtjs/meta@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-1.0.0.tgz#4f7de664fd6de30c4d34ae74b84393b5bc89725e"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-1.0.1.tgz#9e7721a9dae5dc160283028970f983315564977a"
 
 "@nuxtjs/offline@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/offline/-/offline-1.0.0.tgz#634f9ec7d3e6ab99a0b6595d4e04d443a6c61415"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/offline/-/offline-1.0.1.tgz#e3e18a9342e72e4b01f0600699b45a25642c4408"
   dependencies:
     offline-plugin "^4.7.0"
 
@@ -952,12 +954,12 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000673"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000673.tgz#f3333f7ba6871a190f7a26ed20c1285bc96ca072"
+  version "1.0.30000676"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000676.tgz#82ea578237637c8ff34a28acaade373b624c4ea8"
 
 caniuse-lite@^1.0.30000670:
-  version "1.0.30000673"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000673.tgz#4f1c5fefb304f712c526614d83b19476c16e662a"
+  version "1.0.30000676"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000676.tgz#1e962123f48073f0c51c4ea0651dd64d25786498"
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -1259,12 +1261,13 @@ css-color-names@0.0.4:
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
 
 css-loader@^0.28.1:
-  version "0.28.3"
-  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.3.tgz#9fd5e0b8c405b6df927ba1103887015d360640ce"
+  version "0.28.4"
+  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.4.tgz#6cf3579192ce355e8b38d5f42dd7a1f2ec898d0f"
   dependencies:
     babel-code-frame "^6.11.0"
     css-selector-tokenizer "^0.7.0"
     cssnano ">=2.6.1 <4"
+    icss-utils "^2.1.0"
     loader-utils "^1.0.2"
     lodash.camelcase "^4.3.0"
     object-assign "^4.0.1"
@@ -2050,6 +2053,12 @@ icss-replace-symbols@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/icss-replace-symbols/-/icss-replace-symbols-1.1.0.tgz#06ea6f83679a7749e386cfe1fe812ae5db223ded"
 
+icss-utils@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/icss-utils/-/icss-utils-2.1.0.tgz#83f0a0ec378bf3246178b6c2ad9136f135b1c962"
+  dependencies:
+    postcss "^6.0.1"
+
 ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
@@ -2700,8 +2709,8 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
 nuxt@^1.0.0-alpha1:
-  version "1.0.0-alpha1"
-  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-1.0.0-alpha1.tgz#5b935b6a37a87c2233a79f4ced499c31e97311c7"
+  version "1.0.0-alpha2"
+  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-1.0.0-alpha2.tgz#03366dd8384406b26b1eeff06f7f2b12a6f40c00"
   dependencies:
     ansi-html "^0.0.7"
     autoprefixer "^7.1.0"
@@ -2748,6 +2757,7 @@ nuxt@^1.0.0-alpha1:
     webpack-bundle-analyzer "^2.8.1"
     webpack-dev-middleware "^1.10.2"
     webpack-hot-middleware "^2.18.0"
+    webpack-node-externals "^1.6.0"
 
 oauth-sign@~0.8.1:
   version "0.8.2"
@@ -3914,8 +3924,8 @@ type-is@~1.6.15:
     mime-types "~2.1.15"
 
 uglify-js@3.0.x:
-  version "3.0.11"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.0.11.tgz#81f594b9a24dad76e39da92f8f06e5b3bc8c2e11"
+  version "3.0.13"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.0.13.tgz#1871d736aa1e550c728d7e5a6556579e70925d68"
   dependencies:
     commander "~2.9.0"
     source-map "~0.5.1"
@@ -4039,8 +4049,8 @@ vue-hot-reload-api@^2.1.0:
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.1.0.tgz#9ca58a6e0df9078554ce1708688b6578754d86de"
 
 vue-loader@^12.1.0:
-  version "12.1.1"
-  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-12.1.1.tgz#28d9dbf850c966aaff1947718b1b8b6f83fb9c6a"
+  version "12.2.1"
+  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-12.2.1.tgz#53f27c0973d386768f5a75156f4129b5efc6ba55"
   dependencies:
     consolidate "^0.14.0"
     hash-sum "^1.0.2"
@@ -4154,6 +4164,10 @@ webpack-hot-middleware@^2.18.0:
     html-entities "^1.2.0"
     querystring "^0.2.0"
     strip-ansi "^3.0.0"
+
+webpack-node-externals@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/webpack-node-externals/-/webpack-node-externals-1.6.0.tgz#232c62ec6092b100635a3d29d83c1747128df9bd"
 
 webpack-sources@^0.1.0:
   version "0.1.5"
