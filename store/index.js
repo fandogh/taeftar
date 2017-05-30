@@ -66,7 +66,7 @@ export default {
           if (cityName === 'tehran') {
             cityName = 'تهران';
           }
-          _city.name = countryName + ' / ' + cityName;
+          _city.name = countryName + '-' + cityName;
 
           updateCache();
         }).catch(() => null).then(() => {
