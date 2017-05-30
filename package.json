@@ -7,11 +7,11 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^1.0.1",
-    "@nuxtjs/google-analytics": "^0.2.0",
-    "@nuxtjs/manifest": "^1.0.0",
-    "@nuxtjs/meta": "^1.0.0",
-    "@nuxtjs/offline": "^1.0.0",
-    "nuxt": "^1.0.0-alpha1"
+    "@nuxtjs/axios": "latest",
+    "@nuxtjs/google-analytics": "latest",
+    "@nuxtjs/manifest": "latest",
+    "@nuxtjs/meta": "latest",
+    "@nuxtjs/offline": "latest",
+    "nuxt": "latest"
   }
 }

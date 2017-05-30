@@ -184,8 +184,12 @@ body {
 
 .counter-circle .counter-img {
   width: 200px;
-  bottom: 10%;
-  position: fixed;
+  height: 200px;
+  bottom: -130px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
 }
 
 /* Responsive */
@@ -204,6 +208,6 @@ body {
   }
 
   .counter-img {
-    display: none;
+    z-index: -10;
   }
 }

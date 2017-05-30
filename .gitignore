@@ -14,4 +14,4 @@ dist
 .idea
 *.iml
 
-static/manifest.json
+static/manifest.*.json

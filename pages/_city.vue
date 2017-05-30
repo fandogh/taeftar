@@ -12,7 +12,7 @@
           <span>مونده تا </span>
           {{$store.state.to}}
         </p>
-        <img class="counter-img" src="~assets/img/eftar.png"/>
+        <img class="counter-img" src="~assets/img/eftar.png" alt="" />
       </div>
       <div v-else>
         <span>در حال دریافت موقعیت...</span>

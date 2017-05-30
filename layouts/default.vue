@@ -2,14 +2,14 @@
   <div class="app-container">
     <div class="header">
       <!--<router-link-->
-        <!--v-for="city,key in cities"-->
-        <!--:to="`/${key}`"-->
-        <!--:key="key"-->
-        <!--:exact="true"-->
-        <!--class="city-link"-->
-        <!--active-class="active"-->
+      <!--v-for="city,key in cities"-->
+      <!--:to="`/${key}`"-->
+      <!--:key="key"-->
+      <!--:exact="true"-->
+      <!--class="city-link"-->
+      <!--active-class="active"-->
       <!--&gt;-->
-        <!--{{ city.name }}-->
+      <!--{{ city.name }}-->
       <!--</router-link>-->
 
       <div class="time-selector static">
@@ -22,8 +22,8 @@
 
     <div class="footer">
       <div class="logo">
-        <a href="https://fandogh.org" target="_blank">
-          <img src="~assets/img/fandogh.png" width="50px" height="50px"/>
+        <a href="https://fandogh.org" target="_blank" rel="noopener">
+          <img src="~assets/img/fandogh.png" width="50px" height="50px" alt=""/>
         </a>
       </div>
       <div class="info static" v-if="available">
@@ -43,13 +43,14 @@
     color: #E39657;
     margin-right: 10px;
   }
+
   .city-link.active {
     border-bottom: 3px solid #E39657;
   }
 </style>
 
 <script>
-  import {mapMutations, mapActions,mapGetters } from 'vuex'
+  import {mapMutations, mapActions, mapGetters} from 'vuex'
   import Cities from '../lib/cities'
 
   export default {
@@ -60,7 +61,7 @@
       cities() {
         return Cities
       },
-      ...mapGetters (['available'])
+      ...mapGetters(['available'])
     }
   }
 </script>

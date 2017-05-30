@@ -10,6 +10,9 @@ module.exports = {
     '~assets/css/circle.css',
     '~assets/css/main.css'
   ],
+  build: {
+    extractCSS: true
+  },
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/manifest',

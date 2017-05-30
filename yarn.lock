@@ -2,29 +2,31 @@
 # yarn lockfile v1
 
 
-"@nuxtjs/axios@^1.0.1":
+"@nuxtjs/axios@latest":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-1.0.2.tgz#29b51137b92ce7f51eb899559a83e0316eb052b4"
   dependencies:
     axios "^0.16.1"
 
-"@nuxtjs/google-analytics@^0.2.0":
+"@nuxtjs/google-analytics@latest":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-0.2.0.tgz#4975ef90f8ebdd2493dd6a769ec5e464d8f6db98"
 
-"@nuxtjs/manifest@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.0.1.tgz#73acb31e32c8791f0d4248fe1b95fd1b12a62949"
+"@nuxtjs/manifest@latest":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.1.0.tgz#0fceefb77f17060d038557cabc2450a6e8be8356"
   dependencies:
+    fs-extra "^3.0.1"
+    hash-sum "^1.0.2"
     lodash "^4.17.4"
 
-"@nuxtjs/meta@^1.0.0":
+"@nuxtjs/meta@latest":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-1.0.1.tgz#9e7721a9dae5dc160283028970f983315564977a"
 
-"@nuxtjs/offline@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/offline/-/offline-1.0.1.tgz#e3e18a9342e72e4b01f0600699b45a25642c4408"
+"@nuxtjs/offline@latest":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/offline/-/offline-1.0.2.tgz#cc4535ff7d846506cb81b35a16828a559abc9c63"
   dependencies:
     offline-plugin "^4.7.0"
 
@@ -2708,7 +2710,7 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt@^1.0.0-alpha1:
+nuxt@latest:
   version "1.0.0-alpha2"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-1.0.0-alpha2.tgz#03366dd8384406b26b1eeff06f7f2b12a6f40c00"
   dependencies:
