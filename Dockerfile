@@ -1,7 +1,10 @@
 FROM banian/node
 
 ENV NODE_ENV=production
-WORKDIR /usr/src/app
 CMD npm start
 
-ADD . /usr/src/app
+COPY package.json yarn.lock /usr/src/app/
+RUN yarn install
+
+COPY . /usr/src/app
+RUN npm run build
