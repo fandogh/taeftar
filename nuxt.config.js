@@ -13,12 +13,14 @@ module.exports = {
   build: {
     extractCSS: true
   },
+  ssr: false,
   modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/manifest',
-    '@nuxtjs/offline',
+    require('@nuxtjs/axios'),
+    require('@nuxtjs/manifest'),
+    require('@nuxtjs/offline'),
+    // [require('@nuxtjs/localtunnel'), {subdomain: 'taeftar'}],
     {
-      src: '@nuxtjs/google-analytics',
+      src: require('@nuxtjs/google-analytics'),
       options: {
         ua: 'UA-79535343-1'
       }

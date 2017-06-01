@@ -9,6 +9,7 @@
   "dependencies": {
     "@nuxtjs/axios": "latest",
     "@nuxtjs/google-analytics": "latest",
+    "@nuxtjs/localtunnel": "^0.1.1",
     "@nuxtjs/manifest": "latest",
     "@nuxtjs/meta": "latest",
     "@nuxtjs/offline": "latest",

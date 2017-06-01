@@ -12,17 +12,23 @@
           <span>مونده تا </span>
           {{$store.state.to}}
         </p>
-        <img class="counter-img" src="~assets/img/eftar.png" alt="" />
+        <img class="counter-img" src="~assets/img/eftar.png" alt=""/>
       </div>
       <div v-else>
         <span>در حال دریافت موقعیت...</span>
       </div>
+
+      <div class="zekr">
+        <p>
+          <strong>{{$store.state.zekr.arabic}}</strong>
+        </p>
+        <p>
+          {{$store.state.zekr.persian}}
+        </p>
+      </div>
+
     </div>
 
-    <div class="zekr">
-      <p>{{$store.state.zekr.persian}}</p>
-      <p>{{$store.state.zekr.arabic}}</p>
-    </div>
   </div>
 </template>
 

@@ -16,16 +16,7 @@
         <span>به وقت</span>
         <span>{{$store.state.city.name}}</span>
       </div>
-    </div>
 
-    <nuxt></nuxt>
-
-    <div class="footer">
-      <div class="logo">
-        <a href="https://fandogh.org" target="_blank" rel="noopener">
-          <img src="~assets/img/fandogh.png" width="50px" height="50px" alt=""/>
-        </a>
-      </div>
       <div class="info static" v-if="available">
         <span>اذان مغرب : </span>
         <span>{{$store.state.times.today['maghribo']}}</span>
@@ -33,6 +24,14 @@
         <span>اذان صبح : </span>
         <span>{{$store.state.times.today['fajro']}}</span>
       </div>
+    </div>
+
+    <nuxt></nuxt>
+
+    <div class="logo">
+      <a href="https://fandogh.org" target="_blank" rel="noopener">
+        <img src="~assets/img/fandogh.png" width="50px" height="50px" alt=""/>
+      </a>
     </div>
   </div>
 </template>
