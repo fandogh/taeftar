@@ -24,6 +24,8 @@
         </p>
         <p>
           {{$store.state.zekr.persian}}
+          (<span>ذکر روز</span>
+          {{$store.state.zekr.day}})
         </p>
       </div>
 
