@@ -74,6 +74,9 @@ body {
   z-index: 9999;
   position: absolute;
   bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .logo img {
