@@ -24,7 +24,7 @@
         </p>
         <p>
           {{$store.state.zekr.persian}}
-          (<span>ذکر روز</span>
+          (<span>دعای روز</span>
           {{$store.state.zekr.day}})
         </p>
       </div>
