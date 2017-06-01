@@ -4,14 +4,12 @@ import Axios from 'axios'
 
 export default {
   state() {
-    let now = new Date();
     return {
       city: {
         name: '',
         loc: []
       },
       loadingCity: false,
-      createdAt: now,
       use_hour: true,
       times: {
         today: 0,

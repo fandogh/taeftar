@@ -37,16 +37,11 @@
   import Cities from '../lib/cities'
 
   export default {
-    async fetch({params: {city = ''}, store, redirect}) {
-      await store.dispatch('updateCity', city);
-    },
     validate({params: {city = ''}}) {
       return Boolean(Cities[city]);
     },
     async mounted() {
-      if (!this.available) {
-        await this.updateCity('')
-      }
+      await this.updateCity(this.$route.params.city || '')
       this.timer = setInterval(this.update.bind(this), 1000);
     },
     methods: {
