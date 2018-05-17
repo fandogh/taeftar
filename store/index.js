@@ -48,7 +48,8 @@ export default {
           Object.assign(_city, JSON.parse(localStorage.getItem('currentCity')));
         }
         // Try to get basic location info using IP
-        Axios.get('https://freegeoip.net/json/').then(({data}) => {
+        Axios.get('http://api.ipstack.com/check?access_key=0e76795db4216b9447290c92c0753608&format=1')
+          .then(({ data }) => {
           _city.loc = [data.latitude, data.longitude]
 
           // Determine city name
