@@ -2,17 +2,17 @@
   "name": "taeftar",
   "private": true,
   "scripts": {
-    "dev": "nuxt dev",
+    "dev": "nuxt",
     "build": "nuxt build",
+    "generate": "nuxt generate",
     "start": "nuxt start"
   },
   "dependencies": {
-    "@nuxtjs/axios": "latest",
-    "@nuxtjs/google-analytics": "latest",
-    "@nuxtjs/localtunnel": "^0.1.1",
-    "@nuxtjs/manifest": "latest",
-    "@nuxtjs/meta": "latest",
-    "@nuxtjs/offline": "latest",
-    "nuxt": "^1.0.0-alpha2"
+    "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/google-analytics": "^2.0.2",
+    "@nuxtjs/localtunnel": "^1.0.2",
+    "@nuxtjs/manifest": "^2.1.0",
+    "@nuxtjs/pwa": "^2.0.8",
+    "nuxt-edge": "^2.0.0-25440915.dcc92c6"
   }
 }
