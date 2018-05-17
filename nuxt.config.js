@@ -10,7 +10,7 @@ export default {
     lang: 'fa',
     version: '2.0.0',
     short_name: 'تا افطار',
-    description: 'زمان شمار افطار',
+    description: 'محاسبه میزان زمان باقی مانده تا افطار',
     theme_color: '#E39657'
   },
 
