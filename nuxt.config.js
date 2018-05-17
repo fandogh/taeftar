@@ -7,7 +7,7 @@ export default {
 
   manifest: {
     name: 'تا افطار',
-    lang: 'fa',
+    lang: 'en',
     version: '2.0.0',
     short_name: 'تا افطار',
     description: 'محاسبه میزان زمان باقی مانده تا افطار',
