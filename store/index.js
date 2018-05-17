@@ -3,6 +3,7 @@ import Cities from '../lib/cities'
 import Axios from 'axios'
 
 export default {
+  strict: false,
   state() {
     return {
       city: {
