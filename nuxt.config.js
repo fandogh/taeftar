@@ -14,6 +14,10 @@ export default {
     theme_color: '#E39657'
   },
 
+  head: {
+    title: 'تا افطار - چقد مونده تا افطار'
+  },
+
   css: [
     '~assets/css/circle.css',
     '~assets/css/main.css'

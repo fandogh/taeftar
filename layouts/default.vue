@@ -29,15 +29,9 @@
     <nuxt></nuxt>
 
     <div class="logo">
-      <a href="https://fandogh.org" target="_blank" rel="noopener">
+      <a href="https://github.com/fandogh/taeftar" target="_blank" rel="noopener">
         <img src="~assets/img/fandogh.png" width="50px" height="50px" alt=""/>
       </a>
-      <iframe :src="`https://ghbtns.com/github-btn.html?user=pi0&repo=taeftar&type=star&count=true&size=small`"
-              frameborder="0"
-              scrolling="0"
-              width="80"
-              height="35px"
-      ></iframe>
     </div>
   </div>
 </template>
