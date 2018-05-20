@@ -10,7 +10,7 @@ export default {
     lang: 'e',
     version: '2.0.0',
     short_name: 'تا افطار',
-    description: 'محاسبه میزان زمان باقی مانده تا افطار',
+    description: 'محاسبه میزان زمان باقی مانده تا افطار و سحر',
     theme_color: '#E39657'
   },
 
