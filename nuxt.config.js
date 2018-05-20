@@ -7,7 +7,7 @@ export default {
 
   manifest: {
     name: 'تا افطار',
-    lang: 'en',
+    lang: 'e',
     version: '2.0.0',
     short_name: 'تا افطار',
     description: 'محاسبه میزان زمان باقی مانده تا افطار',
@@ -18,10 +18,6 @@ export default {
     '~assets/css/circle.css',
     '~assets/css/main.css'
   ],
-
-  build: {
-    extractCSS: true
-  },
 
   modules: [
     '@nuxtjs/axios',
