@@ -14,6 +14,10 @@ export default {
     theme_color: '#E39657',
     start_url: "/?standalone=true&utm_source=app"
   },
+  
+  meta: {
+    nativeUI: true
+  },
 
   head: {
     title: 'تا افطار - چقد مونده تا افطار'
