@@ -11,7 +11,8 @@ export default {
     version: '2.0.0',
     short_name: 'تا افطار',
     description: 'محاسبه میزان زمان باقی مانده تا افطار و سحر',
-    theme_color: '#E39657'
+    theme_color: '#E39657',
+    start_url: "/?standalone=true&utm_source=app"
   },
 
   head: {
