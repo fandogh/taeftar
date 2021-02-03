@@ -12,7 +12,7 @@
     "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/localtunnel": "^1.1.0",
     "@nuxtjs/manifest": "^2.6.0",
-    "@nuxtjs/pwa": "^2.6.0",
+    "@nuxtjs/pwa": "^3.3.5",
     "nuxt-edge": "^2.0.0-25638738"
   }
 }
